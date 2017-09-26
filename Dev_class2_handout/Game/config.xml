@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Config file for the game -->
+<config>
+  
+  <name value = "xml_game"/>
+
+  <window>
+    <fullscreen value ="false"/>
+    <borderless value ="false"/>
+    <resizable value ="true"/>
+    <fullscreen_window value ="false"/>
+    <width value ="1024"/>
+    <height value ="768"/>
+    <scale value ="1"/>
+  </window>
+</config>
+
+
+
