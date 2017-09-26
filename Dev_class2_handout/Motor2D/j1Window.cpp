@@ -19,7 +19,7 @@ j1Window::~j1Window()
 }
 
 // Called before render is available
-bool j1Window::Awake(pugi::xml_node* new_node)
+bool j1Window::Awake(pugi::xml_node& new_node)
 {
 	LOG("Init SDL window & surface");
 	bool ret = true;
@@ -34,9 +34,9 @@ bool j1Window::Awake(pugi::xml_node* new_node)
 		//Create window
 		Uint32 flags = SDL_WINDOW_SHOWN;
 
-		width = WIDTH;
-		height = HEIGHT;
-		scale = SCALE;
+		width = new_node.child("width").attribute("value").as_int();
+		height = new_node.child("height").attribute("value").as_int();;
+		scale = new_node.child("scale").attribute("value").as_int();;
 
 		if(FULLSCREEN)
 		{
@@ -72,8 +72,7 @@ bool j1Window::Awake(pugi::xml_node* new_node)
 
 			// TODO 4: Read the title of the app from the XML
 			// and set directly the window title using SetTitle()
-			App->branch.
-			SetTitle();
+			LOG(new_node.child("title").attribute("value").as_string());
 		}
 	}
 

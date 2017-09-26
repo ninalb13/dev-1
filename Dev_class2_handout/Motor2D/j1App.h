@@ -83,6 +83,7 @@ private:
 	pugi::xml_document config_doc;
 	pugi::xml_node branch;
 
+
 	int					argc;
 	char**				args;
 };
